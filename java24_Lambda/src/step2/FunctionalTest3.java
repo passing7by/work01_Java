@@ -55,8 +55,8 @@ public class FunctionalTest3 {
 		
 		
 		System.out.println("\n4. map의 모든 키값과 밸류값 출력 ==> forEach");
-		map.keySet().forEach(i->{
-			System.out.println(i + map.get(i));
+		map.entrySet().forEach(i->{
+			System.out.println(i);
 		});
 
 	}

@@ -9,7 +9,7 @@ interface Workable{
 
 class Employee{ //Workable을 매개변수로 Hasing
 	public void work(Workable w) { //해징으로 함수형 인터페이스가 들어감
-		String result = w.monthPayment("Smith", 2000.0);
+		String result = w.monthPayment("Smith", 2000.0); //() 안의 값으로 어떻게 구현할지{}를 21~23행의 람다식으로 작성
 		System.out.println("result : "+ result);
 	}
 }

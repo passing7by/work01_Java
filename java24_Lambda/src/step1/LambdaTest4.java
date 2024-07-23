@@ -4,10 +4,11 @@ package step1;
  *  훨씬 더 간단한 코드로 다시 작성해보자.
  *  
  *  @FunctionalInterface
- *  1. 매개변수 O, 반환타입 X
- *  2. 매개변수 X, 반환타입 O
- *  3. 매개변수 O, 반환타입 O
- *  4. 매개변수 O, 반환타입 boolean
+ *  0. 매개변수 X, 반환타입 X ex. Runnable void run()
+ *  1. 매개변수 O, 반환타입 X ex. Consumer void accept(T) --> 값 주입/출력
+ *  2. 매개변수 X, 반환타입 O ex. Supplier T get() --> 값 리딩
+ *  3. 매개변수 O, 반환타입 O ex. Function T apply(T)
+ *  4. 매개변수 O, 반환타입 boolean ex. Predicate boolean test(T)
  *  
  */
 

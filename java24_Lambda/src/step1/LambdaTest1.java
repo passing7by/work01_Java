@@ -51,7 +51,7 @@ public class LambdaTest1 {
 		
 		//2. 람다식으로 구현 (매개변수 -> 구현부;)
 		MyFunction f2 = (a, b) -> a>b ? a:b;
-		int result2 = f2.max(5, 3);
+		int result2 = f2.max(5, 3); //윗줄에서 f2에 할당된 람다식((a, b) -> a>b ? a:b;)이 돌아감
 		System.out.println("result2 : "+result2);
 
 		//
