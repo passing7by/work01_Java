@@ -34,7 +34,10 @@ public class GenericWildCardTest4 {
 		takeAnimals(animals);
 		
 		List<Dog> dogs = List.of(new Dog(), new Dog());
-		takeAnimals(dogs); //제한된 파라미터 안 쓸 경우 : 에러...dogs가 animals에 할당 되어야 하지 않냐? 다형성 아닌가!
+		takeAnimals(dogs);
+		//제한된 파라미터 안 쓸 경우 : 에러...dogs가 animals에 할당 되어야 하지 않냐? 다형성 아닌가!
+		//ㄴ 객체가 아닌 리스트라는 컨테이너를 만드는 것 => 객체의 다형성과는 다름 => List<Animal>와 List<Dog>는 다형성으로 연결된 관계가 아님
+	
 
 		
 	}

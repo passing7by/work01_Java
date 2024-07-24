@@ -1,18 +1,19 @@
 package test1;
 
-//Generic 사용 안함
+//Generic 사용하지 않음
 //box에 뭐든지 담을 수 있도록 설계했을 때의 상황...
 /*
  * 1. 뭐든지 담긴다
  * 2. 꺼낼 때마다 오브젝트 캐스팅을 해 줘야 한다
  */
+
 class Box{
 	Object content; //box에 뭐든지 담을 수 있기 위해서는 object로 지정해야 함
 	
 	public Object selectContent() { //box에 들어 있는 내용물을 꺼내는 함수
 		return content;
 	}
-}
+}//Box
 
 public class GenericTest01 {
 
