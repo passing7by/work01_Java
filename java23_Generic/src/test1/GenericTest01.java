@@ -13,7 +13,7 @@ class Box{
 	public Object selectContent() { //box에 들어 있는 내용물을 꺼내는 함수
 		return content;
 	}
-}//Box
+}//class Box
 
 public class GenericTest01 {
 
@@ -24,6 +24,6 @@ public class GenericTest01 {
 		String bearDoor=(String)box.selectContent(); //오브젝트 캐스팅 해 줘야 함
 		System.out.println("박스 안의 내용물은..."+bearDoor);
 		
-	}
+	}//main
 
-}
+}//public class GenericTest01
