@@ -31,15 +31,12 @@ class Product<T1, T2, T3>{
 	public void setPrice(T3 price) {
 		this.price = price;
 	}
-	
-	
-}
+}//class Product<T1, T2, T3>
 
 public class GenericProductTest1 {
 
 	public static void main(String[] args) {
 		Product<Long, String, Double> p = new Product<>(112233L, "LG그램", 1700000.0);
 		System.out.println(p.getBrand()+", "+p.getPrice());
-	}
-
-}
+	}//main
+}//public class GenericProductTest1
