@@ -15,6 +15,7 @@ class Manager extends Employee{
 class Engineer extends Employee{
 
 }
+
 class Application<T>{ //제한된 파라미터 타입 사용 못함
 	T kind;
 
@@ -23,7 +24,7 @@ class Application<T>{ //제한된 파라미터 타입 사용 못함
 		this.kind = kind;
 	}
 	
-}
+}//Application
 
 class PersonService{
 	public static void register(Application<?> application) {

@@ -39,4 +39,5 @@ public class GenericProductTest1 {
 		Product<Long, String, Double> p = new Product<>(112233L, "LG그램", 1700000.0);
 		System.out.println(p.getBrand()+", "+p.getPrice());
 	}//main
+	
 }//public class GenericProductTest1

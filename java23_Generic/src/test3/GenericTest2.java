@@ -18,14 +18,20 @@ public class GenericTest2 {
 //제한된 파라미터 타입을 갖는 제너릭 메소드 정의
 	
 	public static <T extends Number> boolean campare(T t1, T t2) {
+	//[어디서든지 접근 허용 & 객체생성 없이 사용 가능 & Number를 포함하여, Number로부터 상속받은 모든 타입이 이 메소드에 들어갈 수 있음
+	//& boolean 타입으로 리턴함 & 인자값은 두 개]
 		System.out.println("compare( "+t1.getClass().getSimpleName()+", "+ 
 										t2.getClass().getSimpleName()+" )");
+		//[getClass() : 현재 참조하고 있는 클래스를 확인할 수 있는 메소드
+		//출력값 : class 패키지명.클래스명]
+		//[getName(): 패키지명이 포함된 클래스명 추출]
+		//[getSimpleName() : 클래스명만 추출]
 		double v1=t1.doubleValue(); //UnBoxing
 		double v2=t2.doubleValue();
 
 		return (v1==v2);
 	}//campare
-	//[Static Method -> 객체 생성 없이 호출 가능]
+	//[main 밖에서 GenericTest2의 메소드 작성 - Static Method -> 객체 생성 없이 호출 가능]
 	
 	public static void main(String[] args) {
 		//......Auto Boxing
@@ -40,4 +46,5 @@ public class GenericTest2 {
 //		System.out.println(result2);
 		//숫자 타입만 가능
 	}//main
+	
 }//public class GenericTest2

@@ -73,13 +73,23 @@ public class SongsStreamTest {
 		 Optional<Song> result3=songs.stream()
 					.filter(s-> s.getYear() == 1995)
 					.findFirst();
-		 if(result3.isPresent()) 
+		 if(result3.isPresent()) //isPresent() - null이 아니라 값이 들어가 있는지 확인
 //			 System.out.println(result3);
 			 //출력 결과 : Optional[Hurt, Nine Inch Nails, Industrial Rock, 1995, 257]
 			 System.out.println(result3.get());
 		 	//출력 결과 : Hurt, Nine Inch Nails, Industrial Rock, 1995, 257
 		 else
 			 System.out.println("해당 년도의 노래는 찾을수 없습니다.");
+		 
+		 System.out.println("-----------------------------------------------------");
+		 
+		 Song song1995=songs.stream()
+					.filter(s-> s.getYear() == 1995)
+					.findFirst()
+//					.orElseThrow(i->new RuntimeException()) /이렇게도 작성 가능
+					.orElseThrow(RuntimeException::new); //orElseThrow() - 예외를 발생시킴
+		 System.out.println(song1995);
+		 
 	}
 }
 

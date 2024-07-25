@@ -4,7 +4,9 @@ package com.edu.statictest;
  * 객체 생성 == 필드 초기화
  */
 public class StaticExamTest3 {
-	static int i;
+	
+	static int i; //public class StaticExamTest3가 갖는 static 변수 선언
+	
 	public static void main(String[] args) { //JVM이 가장 먼저 읽는 함수: main - 하는 일: 1.객체 생성 2.함수 호출
 		System.out.println("1. main method block......" + i);
 	}//main
@@ -14,5 +16,6 @@ public class StaticExamTest3 {
 	static {
 		i = 300;
 		System.out.println("2. static block......" + i);
-	}
+	}//static
+	
 }//class
