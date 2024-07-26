@@ -37,13 +37,17 @@ public class LambdaTest1 {
 
 	public static void main(String[] args) {
 		//1. 익명클래스로 구현
-		MyFunction f = new MyFunction() { //new와 MyFunction 사이에 '? implements'가 생략됨
+		MyFunction f = new MyFunction() {
+		//new와 MyFunction 사이에 '? implements'가 생략됨
+		//[interface인  MyFunction()의 구현부 {}를 구현해야 함
+		// 즉, interface를 구현하려면 interface를 상속받아 클래스를 생성하고(class명 implements interface명),
+		// 그 클래스 안에서 메소드를 구현해야 함]
 
 			@Override
 			public int max(int a, int b) {
 				
 				return a>b ? a:b;
-			} 
+			}
 			
 		};
 		int result1 = f.max(5, 3);
@@ -51,6 +55,7 @@ public class LambdaTest1 {
 		
 		//2. 람다식으로 구현 (매개변수 -> 구현부;)
 		MyFunction f2 = (a, b) -> a>b ? a:b;
+		//[MyFunction 타입의 interface f2를 상속받은 익명의 클래스 안의 메소드 max() 구현...]
 		int result2 = f2.max(5, 3); //윗줄에서 f2에 할당된 람다식((a, b) -> a>b ? a:b;)이 돌아감
 		System.out.println("result2 : "+result2);
 

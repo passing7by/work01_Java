@@ -25,9 +25,10 @@ import java.util.function.Predicate;
 import java.util.function.Supplier;
 
 public class FunctionalTest1 {
-
+	
 	public static void main(String[] args) {
 		System.out.println("\n------------Supplier-----------");
+		
 		Supplier<Integer> s = ()-> (int)(Math.random()*100)+1; //1~100사이의 난수가 발생되도록 임의의 정수 리턴
 		
 		List<Integer> list = new ArrayList<>();
@@ -51,14 +52,13 @@ public class FunctionalTest1 {
 		
 		List<Integer> newList = doSomething(f, list);
 		System.out.println(newList);
-	}
+	}//main
 	
 	public static void makeRandomList(Supplier<Integer> s, List<Integer> list) {
-		for(int i=0; i<10; i++	) {
+		for(int i=0; i<10; i++) {
 			list.add(s.get()); //Supplier에서 1~100 사이의 임의의 정수값을 받아서 List에 담는다
 		}
-	}
-	//makeRandomList
+	}//makeRandomList
 	
 	public static void printEvemNumber(Predicate<Integer> p, Consumer<Integer> c, List<Integer> list) {
 		System.out.print("[");
@@ -77,7 +77,7 @@ public class FunctionalTest1 {
 			newList.add(f.apply(i)); //기존의 리스트값을 변환해서(일의 자리를 없애고) 새로운 리스트 생성
 		}
 		return newList;
-	}
-}
+	}//doSomething
+}//FunctionalTest1
 
 
