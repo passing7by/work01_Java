@@ -4,9 +4,15 @@
    
    8버전 이후에 함수형 인터페이스를 Hasing하면서 제공되는 기능이 추가됨...
    
-   Collection : boolean remoceIf(Predicate p)
+   Collection : boolean removeIf(Predicate p)
    List : void replaceAll()
-   Map : compute(), forEadh(!!!!!!), ?
+   	- replaceAll() : 인자로 함수를 받고, 함수는 리스트의 요소를 인자로 받으며 변경할 값을 리턴함
+   					 즉, 리스트의 모든 요소를 순회하면서 값을 변경
+   Map : compute(), forEach(!!!!!!), ?
+   	- compute() : 람다식을 통해서 기존의 값에 어떻게 연산을 할지 지정할 수 있음
+   				  메서드에 넘겨주는 전달 인자의 첫 번째는 키값이고, 두 번째 인자에 람다식을 전달하면 됨
+   				  해당 키의 값이 존재하지 않으면 NullPointerException이 발생하므로,
+   				  키의 값이 null일 때 리턴해줄 값도 지정해야 함
  */
 package step2;
 
@@ -58,8 +64,7 @@ public class FunctionalTest3 {
 		map.entrySet().forEach(i->{
 			System.out.println(i);
 		});
-
-	}
-}
+	}//main
+}//FunctionalTest3
 
 

@@ -45,7 +45,7 @@ public class FunctionalTest1 {
 		Predicate<Integer> p = i -> i%2==0;
 		// 짝수인지의 여부
 		
-		printEvemNumber(p, c, list);
+		printEvenNumber(p, c, list);
 		
 		System.out.println("\n------------Function-----------");
 		Function<Integer, Integer> f = i-> i/10*10; //i값의 일의 자리를 없애는 공식
@@ -60,12 +60,11 @@ public class FunctionalTest1 {
 		}
 	}//makeRandomList
 	
-	public static void printEvemNumber(Predicate<Integer> p, Consumer<Integer> c, List<Integer> list) {
+	public static void printEvenNumber(Predicate<Integer> p, Consumer<Integer> c, List<Integer> list) {
 		System.out.print("[");
 		for(Integer i : list) {
 			//만약에 i값이 짝수라면 해당하는 값을 출력
 			if(p.test(i)) c.accept(i);
-				
 		}
 		System.out.print("]");
 	}//printEvemNumber
