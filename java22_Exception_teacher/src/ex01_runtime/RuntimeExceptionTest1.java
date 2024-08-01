@@ -11,15 +11,30 @@ public class RuntimeExceptionTest1 {
 			"No, I mean it",
 			"Nice to meet you"
 		};
+		
 		int i=0;
+		
+		/*
+		while(i<=3) {	
+			System.out.println(str[i]);
+			//[ str[0] : Hello(0), str[1] : No(1), str[2] : Nice(2),...str[3] : 배열의 길이를 벗어남 ]
+			i++;
+		}
+		*/
+		//[ArrayIndexOutOfBoundsException 발생 : 정해진 배열의 크기보다 크거나 음수 index에 대한 요청이 있을 시 발생]
+		
+		
 		while(i<=3) {
-			try {
-				System.out.println(str[i]);//Hello(0), No(1), Nice(2),....str[3]
-			}catch(ArrayIndexOutOfBoundsException e) {
+			try { //[예외가 발생할 가능성이 있는 코드를 try{} 안에 작성]
+				System.out.println(str[i]);
+			}catch(ArrayIndexOutOfBoundsException e) { //[catch (발생한 예외의 종류) {예외 발생시 작동시킬 코드}]
 				System.out.println("Nice Catch~~!!");
 			}
+			//[try{} 에서 예외가 발생하면, 해당 예외를 () 안에 담고 있는 catch(){} 가 실행됨]
 			i++;
-		}	
+		}
+
 		System.out.println("The end....");
-	}
-}
+		//[이 코드는 1. 모든 코드가 예외 없이 실행되거나 2. 예외가 발생하더라도 그 예외가 처리되었다면 실행되는 코드임]
+	}//main
+}//RuntimeExceptionTest1

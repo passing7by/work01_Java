@@ -16,8 +16,9 @@ class FileReading{
 			//e.printStackTrace();
 			System.out.println(e);
 		}
-	}
-}
+	}//readFile()
+}//FileReading
+
 public class CompileExceptionTest1 {
 	public static void main(String[] args) {
 		System.out.println("1. FileReading 객체 생성...");
@@ -26,7 +27,5 @@ public class CompileExceptionTest1 {
 		fr.readFile("test.txt");
 		
 		System.out.println("3. 파일을 잘 읽어들였습니다..");
-
-	}
-
-}
+	}//main
+}//CompileExceptionTest1
