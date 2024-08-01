@@ -16,6 +16,8 @@ class Engineer extends Employee{
 
 }//extends Person...
 
+class Animal{}
+
 class Application<T>{
 //제한된 파라미터 타입 사용 못함
 //[클래스 타입에서는 제한된 파라미터 사용 불가 -> 메소드 반환타입 or 메소드 매개변수타입으로만 사용 가능]
@@ -49,6 +51,7 @@ public class GenericWildCardTest3 {
 		PersonService.register(new Application(new Employee())); //ok
 		PersonService.register2(new Application(new Manager())); //ok
 //		PersonService.register3(new Application(new Person())); //fail
+		PersonService.register2(new Application(new Animal())); //[이것도 됨....]
 
 		
 	}
